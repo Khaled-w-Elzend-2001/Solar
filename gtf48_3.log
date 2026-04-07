@@ -1,0 +1,16 @@
+nohup: ignoring input
+ERROR: LoadError: MethodError: no method matching getindex(::Dataset{Matrix{Float32}}, ::UnitRange{Int64})
+Stacktrace:
+ [1] top-level scope
+   @ ~/GTF-shPLRNN/paper_experiments/EEG/Table1/khaled_shPLRNN_GTF.jl:77
+in expression starting at /export/home/kelzend/GTF-shPLRNN/paper_experiments/EEG/Table1/khaled_shPLRNN_GTF.jl:77
+1
+      From worker 2:	Running on 1 Julia thread(s) [BLAS threads: 1]
+      From worker 2:	Training on CPU.
+      From worker 2:	No path to external inputs provided, initializing vanilla Dataset.
+      From worker 2:	Model / # Parameters: clippedShallowPLRNN{Vector{Float32}, Matrix{Float32}} / 77696
+      From worker 2:	Obs. Model / # Parameters: Affine{Matrix{Float32}, Vector{Float32}} / 2304
+      From worker 2:	Using GTF with initial α = 0.3 and annealing method: product_upper_bound (γ = 0.995, k = 5)
+      From worker 2:	Partial forcing set to: true (N = 48, M = 48)
+      From worker 2:	┌ Warning: NaN(s) in parameters detected! This is likely due to exploding gradients. Aborting training...
+      From worker 2:	└ @ GTF.TFTraining ~/GTF-shPLRNN/src/tf_training/training.jl:153
